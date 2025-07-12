@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            direction: rtl;
+            margin: 30px;
+            background-color: #f8f8f8;
+        }
+
+        h2, h3 {
+            color: #006666;
+            text-align: center;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #008080;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #contact-buttons {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #contact-buttons a {
+            color: #008080;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>فرم ثبت اهداکنندگان</h2>
+    <form action="process-donation.php" method="POST">
+        <label>نام کامل:</label>
+        <input type="text" name="name" required>
+
+        <label>ایمیل:</label>
+        <input type="email" name="email" required>
+
+        <label>مقدار کمک (افغانی):</label>
+        <input type="number" name="amount" required>
+
+        <button type="submit">ارسال</button>
+    </form>
+
+    <h2>فرم ثبت نیازمندان</h2>
+    <form action="submit.php" method="POST">
+        <label>نام کامل:</label>
+        <input type="text" name="name" required>
+
+        <label>شماره تماس:</label>
+        <input type="tel" name="phone" required>
+
+        <label>نوع نیازمندی:</label>
+        <textarea name="need" rows="4" required></textarea>
+
+        <button type="submit">ارسال</button>
+    </form>
+
+    <div id="contact-buttons">
+        <h3>تماس مستقیم</h3>
+        <a href="https://wa.me/491234567890" target="_blank">📱 واتساپ</a>
+        <a href="mailto:info@example.com">📧 ایمیل</a>
+        <a href="https://t.me/yourusername" target="_blank">📬 تلگرام</a>
+    </div>
+
+</body>
+</html>
